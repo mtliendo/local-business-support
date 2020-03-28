@@ -1,0 +1,17 @@
+---
+path: "/cheesy-cow"
+title: "Cheesy Cow Mac & Cheesery"
+city: "Bettendorf"
+tags: ["mac-n-cheese", "mexican", "Curbside", "Carry Out"]
+cover: "./cheesycow.jpg"
+date: "2020-03-28"
+published: true
+---
+
+We will be offering curbside delivery. If you don’t want to come in we will bring it out to you. Just call your order in at 563-424-1073.
+
+---
+
+Beth and Greg Aronson are Quad Cities natives and proud alums of Pleasant Valley High School. In 1999, they combined their passion for coffee and community and opened Coffee Hound, one of the Quad Cities' first drive-thru coffee shops.
+
+Now, they bring their passion and expertise to the restaurant industry with Cheesy Cow Mac & Cheesery. At Cheesy Cow, diners can enjoy a quick, freshly prepared, and satisfying meal in a bright, fun, refreshing atmosphere.
