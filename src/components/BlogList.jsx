@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import Img from 'gatsby-image';
-import { TagsBlock } from 'components';
-import { Container } from 'layouts';
+import React from 'react'
+import styled from '@emotion/styled'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
+import { TagsBlock } from 'components'
+import { Container } from 'layouts'
 
 const Wrapper = styled.article`
   margin: 0 3rem;
-`;
+`
 
 const Image = styled.div`
   margin: auto;
@@ -54,7 +54,7 @@ const Image = styled.div`
   @media (max-width: 500px) {
     min-height: 200px;
   }
-`;
+`
 
 const Information = styled.div`
   h1 {
@@ -75,16 +75,16 @@ const Information = styled.div`
     max-width: 100%;
     width: 100%;
   }
-`;
+`
 
 const Date = styled.div`
   margin-top: 1rem;
   color: ${props => props.theme.colors.black.lighter};
-`;
+`
 
 const Title = styled.h1`
   margin: 0;
-`;
+`
 
 const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
   <Container>
@@ -104,9 +104,9 @@ const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
       </Information>
     </Wrapper>
   </Container>
-);
+)
 
-export default BlogList;
+export default BlogList
 
 BlogList.propTypes = {
   cover: PropTypes.object.isRequired,
@@ -115,4 +115,4 @@ BlogList.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
-};
+}

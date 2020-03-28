@@ -1,10 +1,10 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
-import { Layout, Container, Content } from 'layouts';
-import { TagsBlock, Header, SEO } from 'components';
-import '../styles/prism';
+import React from "react"
+import { graphql, Link } from "gatsby"
+import styled from "@emotion/styled"
+import PropTypes from "prop-types"
+import { Layout, Container, Content } from "layouts"
+import { TagsBlock, Header, SEO } from "components"
+import "../styles/prism"
 
 const SuggestionBar = styled.div`
   display: flex;
@@ -12,32 +12,32 @@ const SuggestionBar = styled.div`
   justify-content: space-between;
   background: ${props => props.theme.colors.white.light};
   box-shadow: ${props => props.theme.shadow.suggestion};
-`;
+`
 const PostSuggestion = styled.div`
   display: flex;
   align-items: center;
   margin: 1rem 3rem 0 3rem;
-`;
+`
 
 const Post = ({ data, pageContext }) => {
-  const { next, prev } = pageContext;
-  const {html, frontmatter, excerpt } = data.markdownRemark
-  const {date, title, tags, path, description} = frontmatter
-  const image = frontmatter.cover.childImageSharp.fluid;
+  const { next, prev } = pageContext
+  const { html, frontmatter, excerpt } = data.markdownRemark
+  const { city, title, tags, path, description } = frontmatter
+  const image = frontmatter.cover.childImageSharp.fluid
 
   return (
     <Layout>
       <SEO
         title={title}
-        description={description || excerpt || ' '}
+        description={description || excerpt || " "}
         banner={image}
         pathname={path}
         article
       />
-      <Header title={title} date={date} cover={image} />
+      <Header title={title} city={city} cover={image} />
       <Container>
-        <Content input={html} />
         <TagsBlock list={tags || []} />
+        <Content input={html} />
       </Container>
       <SuggestionBar>
         <PostSuggestion>
@@ -58,10 +58,10 @@ const Post = ({ data, pageContext }) => {
         </PostSuggestion>
       </SuggestionBar>
     </Layout>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post
 
 Post.propTypes = {
   pageContext: PropTypes.shape({
@@ -69,7 +69,7 @@ Post.propTypes = {
     next: PropTypes.object,
   }).isRequired,
   data: PropTypes.object.isRequired,
-};
+}
 
 export const query = graphql`
   query($pathSlug: String!) {
@@ -77,6 +77,7 @@ export const query = graphql`
       html
       frontmatter {
         date
+        city
         title
         tags
         cover {
@@ -96,4 +97,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

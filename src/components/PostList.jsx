@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Img from 'gatsby-image';
-import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
-import theme from '../../config/theme';
+import React from 'react'
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from '@emotion/styled'
+import PropTypes from 'prop-types'
+import theme from '../../config/theme'
 
 const Wrapper = styled.article`
   margin-bottom: 2rem;
@@ -35,7 +35,7 @@ const Wrapper = styled.article`
     width: 100%;
     height: 15rem;
   }
-`;
+`
 
 const StyledLink = styled(Link)`
   position: absolute;
@@ -70,7 +70,7 @@ const StyledLink = styled(Link)`
     border-radius: ${theme.borderRadius.default};
     transition: opacity ${theme.transitions.default.duration};
   }
-`;
+`
 
 const Image = styled.div`
   position: absolute;
@@ -91,7 +91,7 @@ const Image = styled.div`
   > div > div {
     position: static !important;
   }
-`;
+`
 
 const Info = styled.div`
   color: ${props => props.theme.colors.white.light};
@@ -99,33 +99,32 @@ const Info = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-`;
+`
 
 const Title = styled.h2`
   margin-bottom: 0.6rem;
-`;
+`
 
-const PostList = ({ cover, path, date, title, excerpt }) => (
+const PostList = ({ cover, path, title, city }) => (
   <Wrapper>
     <Image>
       <Img fluid={cover} />
     </Image>
     <StyledLink to={path}>
       <Info>
-        <span>{date}</span>
+        {/* <span>{date}</span> */}
         <Title>{title}</Title>
-        <span>{excerpt}</span>
+        <span>{city}</span>
       </Info>
     </StyledLink>
   </Wrapper>
-);
+)
 
-export default PostList;
+export default PostList
 
 PostList.propTypes = {
   cover: PropTypes.object.isRequired,
   path: PropTypes.string.isRequired,
-  excerpt: PropTypes.string,
-  date: PropTypes.string.isRequired,
+  city: PropTypes.string,
   title: PropTypes.string.isRequired,
-};
+}

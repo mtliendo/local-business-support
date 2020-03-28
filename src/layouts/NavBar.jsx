@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styled from '@emotion/styled';
-import Headroom from 'react-headroom';
-import logo from '../../static/logo/header-logo.png';
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from '@emotion/styled'
+import Headroom from 'react-headroom'
+import logo from '../../static/logo/header-logo.png'
 
 const StyledLink = styled(Link)`
   display: flex;
   font-weight: 700;
   align-items: center;
-`;
+`
 
 const Nav = styled.nav`
   display: flex;
@@ -25,7 +25,7 @@ const Nav = styled.nav`
       color: ${props => props.theme.colors.white.grey};
     }
   }
-`;
+`
 
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
@@ -34,10 +34,10 @@ const NavBar = () => (
     </StyledLink>
     <Nav>
       <Link to="/">Home</Link>
-      <Link to="/blog">Blog</Link>
-      <Link to="/about">About</Link>
+      {/* <Link to="/blog">Blog</Link>
+      <Link to="/about">About</Link> */}
     </Nav>
   </Headroom>
-);
+)
 
-export default NavBar;
+export default NavBar
