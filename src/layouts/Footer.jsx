@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react"
+import styled from "@emotion/styled"
 
 const Wrapper = styled.footer`
   position: relative;
@@ -12,23 +12,23 @@ const Wrapper = styled.footer`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     padding-top: 7rem;
   }
-`;
+`
 
 const Text = styled.div`
   margin: 0;
   padding-bottom: 2rem;
   text-align: center;
   color: ${props => props.theme.colors.white.light};
-`;
+`
 
 const Footer = () => (
   <Wrapper>
     <Text>
       <span>
-        Gatsby Tutorial Starter -{' '}
-        <a href="https://justinformentin.com">Justin Formentin</a>
+        Made with ❤️ by{" "}
+        <a href="https://qcwam.org">Quad Cities Web and Mobile</a>
       </span>
     </Text>
   </Wrapper>
-);
-export default Footer;
+)
+export default Footer

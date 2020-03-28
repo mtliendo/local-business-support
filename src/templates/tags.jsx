@@ -1,14 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Layout, Container } from 'layouts'
-import { Header, TagsBlock } from 'components'
+import React from "react"
+import PropTypes from "prop-types"
+import { Layout, Container } from "layouts"
+import { Header, TagsBlock } from "components"
 
 const Tags = ({ pageContext }) => {
   const { tags } = pageContext
 
   return (
     <Layout>
-      <Header title="Tags Page">Gatsby Tutorial Starter</Header>
+      <Header title="All Local Business Tags">
+        Select a tag to view businesses of that type
+      </Header>
       <Container>
         <TagsBlock list={tags} />
       </Container>

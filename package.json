@@ -1,15 +1,10 @@
 {
-  "name": "gatsby-tutorial-starter",
-  "author": "Justin Formentin",
-  "title": "Gatsby V2 Tutorial Starter",
-  "description": "My Blog",
-  "homepage": "https://gatsby-tutorial-starter.netlify.com",
+  "name": "local-business-support",
+  "author": "Michael Liendo",
+  "title": "Local Business Support",
+  "description": "A site where others can view local businesses, what they sell, and how to support them.",
   "license": "MIT",
-  "version": "0.0.7",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/justinformentin/gatsby-v2-tutorial-starter"
-  },
+  "version": "0.0.1",
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
@@ -67,8 +62,8 @@
   },
   "keywords": [
     "justin formentin",
-    "personal blog",
-    "tutorial",
+    "Quad Cities Web and Mobile",
+    "Michael Liendo",
     "gatsby",
     "emotion"
   ]
