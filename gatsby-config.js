@@ -7,11 +7,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/posts`,
+        path: `${__dirname}/content/businesses`,
       },
     },
     "gatsby-transformer-sharp",

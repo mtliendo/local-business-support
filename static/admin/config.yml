@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: qc-web-and-mobile/local-business-support
+
+media_folder: static/
+public_folder: /
+
+collections:
+  - name: businesses
+    label: Businesses
+    folder: content/posts
+    create: true
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "city", label: "City" }
+      - { name: "cover", label: "Cover Photo", widget: "image" }
+      - { name: "path", label: "URL Path" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "body", label: "Body", widget: "markdown" }
+      - {
+          name: "tags",
+          label: "Tags",
+          widget: "list",
+          default: ["Curbside", "Drive Thru", "Delivery", "Carry Out"],
+        }
