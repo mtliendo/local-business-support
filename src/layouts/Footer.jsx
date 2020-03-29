@@ -15,18 +15,32 @@ const Wrapper = styled.footer`
 `
 
 const Text = styled.div`
-  margin: 0;
-  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0px 1rem 2rem 1rem;
   text-align: center;
   color: ${props => props.theme.colors.white.light};
+  a {
+    color: white;
+    text-decoration: underline;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
 `
 
 const Footer = () => (
   <Wrapper>
     <Text>
       <span>
-        Made with ❤️ by{" "}
-        <a href="https://qcwam.org">Quad Cities Web and Mobile</a>
+        Made with ❤️ by <a href="https://qcwam.org">Quad Cities Web & Mobile</a>
+      </span>
+      <span>
+        Want to get your business featured or updated?{" "}
+        <a href="mailto:admin@qcwam.org?subject=QC%20Support%20Local%20Site">
+          Send us an email!
+        </a>
       </span>
     </Text>
   </Wrapper>
