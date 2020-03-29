@@ -2,13 +2,13 @@ backend:
   name: github
   repo: qc-web-and-mobile/local-business-support
 
-media_folder: static/
-public_folder: /
-
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+publish_mode: editorial_workflow
 collections:
   - name: businesses
     label: Businesses
-    folder: content/posts
+    folder: content/businesses
     create: true
     fields:
       - { name: "title", label: "Title" }
