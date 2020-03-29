@@ -39,8 +39,8 @@ const Index = ({ data }) => {
         {data.site.siteMetadata.title}
       </Header>
       <FilterSection>
-        <label>Filter by City</label>
-        <select>
+        <label for="city-filter">Filter by City</label>
+        <select id="city-filter">
           <option value="All">All Cities</option>
           <option value="Davenport">Davenport</option>
           <option value="Rock Island">Rock Island</option>
