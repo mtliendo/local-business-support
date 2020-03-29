@@ -19,9 +19,14 @@ const PostWrapper = styled.div`
     margin: 4rem 1rem 1rem 1rem;
   }
 `
-const PostSelect = styled.select`
-  border: 1px solid black;
+const FilterSection = styled.section`
   margin: 4rem 4rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  label {
+    margin-bottom: 0.5rem;
+  }
 `
 
 const Index = ({ data }) => {
@@ -33,14 +38,17 @@ const Index = ({ data }) => {
       <Header title="Quad Citizens Supporting Local Businesses">
         {data.site.siteMetadata.title}
       </Header>
-      <PostSelect>
-        <option value="All">All Cities</option>
-        <option value="Davenport">Davenport</option>
-        <option value="Rock Island">Rock Island</option>
-        <option value="Bettendorf">Bettendorf</option>
-        <option value="Moline">Moline</option>
-        <option value="East Moline">East Moline</option>
-      </PostSelect>
+      <FilterSection>
+        <label>Filter by City</label>
+        <select>
+          <option value="All">All Cities</option>
+          <option value="Davenport">Davenport</option>
+          <option value="Rock Island">Rock Island</option>
+          <option value="Bettendorf">Bettendorf</option>
+          <option value="Moline">Moline</option>
+          <option value="East Moline">East Moline</option>
+        </select>
+      </FilterSection>
       <PostWrapper>
         {edges.map(({ node }) => {
           const { id, excerpt, frontmatter } = node
