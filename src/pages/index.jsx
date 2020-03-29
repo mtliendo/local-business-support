@@ -19,15 +19,28 @@ const PostWrapper = styled.div`
     margin: 4rem 1rem 1rem 1rem;
   }
 `
+const PostSelect = styled.select`
+  border: 1px solid black;
+  margin: 4rem 4rem 1rem 4rem;
+`
 
 const Index = ({ data }) => {
   const { edges } = data.allMdx
+
   return (
     <Layout>
       <Helmet title={"Quad Citizens Supporting Local Businesses"} />
       <Header title="Quad Citizens Supporting Local Businesses">
         {data.site.siteMetadata.title}
       </Header>
+      <PostSelect>
+        <option value="All">All Cities</option>
+        <option value="Davenport">Davenport</option>
+        <option value="Rock Island">Rock Island</option>
+        <option value="Bettendorf">Bettendorf</option>
+        <option value="Moline">Moline</option>
+        <option value="East Moline">East Moline</option>
+      </PostSelect>
       <PostWrapper>
         {edges.map(({ node }) => {
           const { id, excerpt, frontmatter } = node

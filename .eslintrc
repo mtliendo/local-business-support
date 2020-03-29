@@ -8,27 +8,28 @@
   "rules": {
     "strict": 0,
     "no-console": "warn",
-    "quotes": [
-      "warn",
-      "single"
-    ],
-    "no-unused-vars": [
-      1
-    ],
+    "quotes": ["warn", "single"],
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+    "no-unused-vars": [1],
     "react/jsx-filename-extension": [
       1,
       {
         "extensions": [".js", ".jsx"]
       }
     ],
-    "prettier/prettier": ["warn", "error", {
-     "endOfLine":"auto"
-   }]
+    "prettier/prettier": [
+      "warn",
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended"
   ],
-  "plugins": ["prettier", "jsx-a11y"]
+  "plugins": ["prettier", "jsx-a11y", "react-hooks"]
 }
