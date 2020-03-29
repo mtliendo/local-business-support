@@ -1,20 +1,18 @@
-const path = require('path')
+const path = require("path")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve('src/templates/post.jsx')
-    const tagPage = path.resolve('src/templates/tags.jsx')
-    const tagPosts = path.resolve('src/templates/tag.jsx')
+    const postTemplate = path.resolve("src/templates/post.jsx")
+    const tagPage = path.resolve("src/templates/tags.jsx")
+    const tagPosts = path.resolve("src/templates/tag.jsx")
 
     resolve(
       graphql(
         `
           query {
-            allMarkdownRemark(
-              sort: { order: ASC, fields: [frontmatter___date] }
-            ) {
+            allMdx(sort: { order: ASC, fields: [frontmatter___date] }) {
               edges {
                 node {
                   frontmatter {
@@ -32,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
           return reject(result.errors)
         }
 
-        const posts = result.data.allMarkdownRemark.edges
+        const posts = result.data.allMdx.edges
 
         const postsByTag = {}
         // create tags page
@@ -51,7 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
         const tags = Object.keys(postsByTag)
 
         createPage({
-          path: '/tags',
+          path: "/tags",
           component: tagPage,
           context: {
             tags: tags.sort(),
@@ -96,7 +94,7 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
     },
   })
 }

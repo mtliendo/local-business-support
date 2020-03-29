@@ -1,7 +1,8 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
-import prism from '../styles/prism';
+import React from "react"
+import styled from "@emotion/styled"
+import PropTypes from "prop-types"
+import prism from "../styles/prism"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const Wrapper = styled.div`
   ${prism};
@@ -57,14 +58,16 @@ const Wrapper = styled.div`
       }
     }
   }
-`;
+`
 
 const Content = ({ input }) => (
-  <Wrapper dangerouslySetInnerHTML={{ __html: input }} />
-);
+  <Wrapper>
+    <MDXRenderer>{input}</MDXRenderer>
+  </Wrapper>
+)
 
-export default Content;
+export default Content
 
 Content.propTypes = {
   input: PropTypes.any.isRequired,
-};
+}

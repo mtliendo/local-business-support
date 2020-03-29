@@ -21,7 +21,7 @@ const PostWrapper = styled.div`
 `
 
 const Index = ({ data }) => {
-  const { edges } = data.allMarkdownRemark
+  const { edges } = data.allMdx
   return (
     <Layout>
       <Helmet title={"Quad Citizens Supporting Local Businesses"} />
@@ -53,7 +53,7 @@ export default Index
 
 Index.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allMdx: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
@@ -79,7 +79,7 @@ export const query = graphql`
         title
       }
     }
-    allMarkdownRemark(
+    allMdx(
       sort: { order: ASC, fields: [frontmatter___city, frontmatter___title] }
     ) {
       edges {

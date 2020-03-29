@@ -1,15 +1,15 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
-import { Header, BlogList } from 'components';
-import { Layout } from 'layouts';
+import React from "react"
+import { graphql } from "gatsby"
+import Helmet from "react-helmet"
+import PropTypes from "prop-types"
+import { Header, BlogList } from "components"
+import { Layout } from "layouts"
 
 const Blog = ({ data }) => {
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMdx
   return (
     <Layout>
-      <Helmet title={'Blog Page'} />
+      <Helmet title={"Blog Page"} />
       <Header title="Blog Page">Gatsby Tutorial Starter</Header>
       {edges.map(({ node }) => (
         <BlogList
@@ -23,14 +23,14 @@ const Blog = ({ data }) => {
         />
       ))}
     </Layout>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog
 
 Blog.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allMdx: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
@@ -47,11 +47,11 @@ Blog.propTypes = {
       ),
     }),
   }),
-};
+}
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
@@ -77,4 +77,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
