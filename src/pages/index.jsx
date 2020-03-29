@@ -32,6 +32,22 @@ const FilterSection = styled.section`
 const Index = ({ data }) => {
   const { edges } = data.allMdx
 
+  const allStores = React.useRef(edges)
+  const [filterableStores, setFilterableStores] = React.useState(edges)
+
+  const handleCityChange = e => {
+    const selectedCity = e.target.value
+    let updatedStores
+    if (selectedCity !== "All") {
+      updatedStores = allStores.current.filter(
+        store => store.node.frontmatter.city === selectedCity
+      )
+    } else {
+      updatedStores = allStores.current
+    }
+
+    setFilterableStores(updatedStores)
+  }
   return (
     <Layout>
       <Helmet title={"Quad Citizens Supporting Local Businesses"} />
@@ -40,7 +56,7 @@ const Index = ({ data }) => {
       </Header>
       <FilterSection>
         <label for="city-filter">Filter by City</label>
-        <select id="city-filter">
+        <select id="city-filter" onChange={handleCityChange}>
           <option value="All">All Cities</option>
           <option value="Davenport">Davenport</option>
           <option value="Rock Island">Rock Island</option>
@@ -50,7 +66,7 @@ const Index = ({ data }) => {
         </select>
       </FilterSection>
       <PostWrapper>
-        {edges.map(({ node }) => {
+        {filterableStores.map(({ node }) => {
           const { id, excerpt, frontmatter } = node
           const { cover, path, title = "hi", date, city } = frontmatter
           return (
