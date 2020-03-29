@@ -8,6 +8,8 @@ publish_mode: editorial_workflow
 collections:
   - name: businesses
     label: Businesses
+    media_folder: ""
+    public_folder: ""
     folder: content/businesses
     create: true
     fields:
