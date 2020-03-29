@@ -10,6 +10,7 @@ collections:
     label: Businesses
     media_folder: ""
     public_folder: ""
+    path: "{{filename}}/index"
     folder: content/businesses
     create: true
     fields:
