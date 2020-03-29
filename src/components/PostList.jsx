@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
-import theme from '../../config/theme'
+import React from "react"
+import { Link } from "gatsby"
+import Img from "gatsby-image"
+import styled from "@emotion/styled"
+import PropTypes from "prop-types"
+import theme from "../../config/theme"
 
 const Wrapper = styled.article`
   margin-bottom: 2rem;
@@ -50,7 +50,7 @@ const StyledLink = styled(Link)`
   z-index: 3;
   border-radius: ${props => props.theme.borderRadius.default};
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 100%;
@@ -99,22 +99,43 @@ const Info = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
+  section {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const Title = styled.h2`
   margin-bottom: 0.6rem;
 `
 
-const PostList = ({ cover, path, title, city }) => (
+const Tag = styled.span`
+  box-sizing: border-box;
+  margin: 0.2rem;
+  font-size: 0.7rem;
+  background-color: lightgray;
+  color: black;
+  border-radius: 3px;
+  padding: 5px;
+`
+
+const TagList = ({ tags }) => {
+  return tags.map(tag => <Tag>{tag}</Tag>)
+}
+const PostList = ({ cover, path, title, city, tags }) => (
   <Wrapper>
     <Image>
       <Img fluid={cover} />
     </Image>
     <StyledLink to={path}>
       <Info>
-        {/* <span>{date}</span> */}
         <Title>{title}</Title>
-        <span>{city}</span>
+        <section>
+          <span>{city}</span>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <TagList tags={tags} />
+          </div>
+        </section>
       </Info>
     </StyledLink>
   </Wrapper>

@@ -1,9 +1,9 @@
 ---
-path: '/antonellas'
-tags: ['pizza', 'Carry Out', 'Delivery']
-city: 'Davenport'
-cover: './antonella.jpg'
-date: '2020-03-28'
+path: "/antonellas"
+tags: ["Carry Out", "Delivery"]
+city: "Davenport"
+cover: "./antonella.jpg"
+date: "2020-03-28"
 title: "Antonella's Restaurant"
 published: true
 ---

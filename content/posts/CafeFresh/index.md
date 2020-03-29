@@ -2,7 +2,7 @@
 path: "/cafe-fresh"
 title: "Cafe Fresh"
 city: "Moline"
-tags: ["coffee", "sandwiches", "Curbside"]
+tags: ["Curbside"]
 cover: "./cafe-fresh.jpg"
 date: "2020-03-28"
 published: true

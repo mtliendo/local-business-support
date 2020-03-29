@@ -74,7 +74,7 @@ const Index = ({ data }) => {
       <PostWrapper>
         {filterableStores.map(({ node }) => {
           const { id, excerpt, frontmatter } = node
-          const { cover, path, title = "hi", date, city } = frontmatter
+          const { cover, path, title, date, city, tags } = frontmatter
           return (
             <PostList
               key={id}
@@ -84,6 +84,7 @@ const Index = ({ data }) => {
               city={city}
               date={date}
               excerpt={excerpt}
+              tags={tags}
             />
           )
         })}

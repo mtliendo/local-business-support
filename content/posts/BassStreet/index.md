@@ -1,10 +1,10 @@
 ---
-path: '/bass-street-chophouse'
-title: 'Bass Street Chop House'
-city: 'Moline'
-tags: ['steak', 'Carry Out', 'Delivery']
-cover: './bass-street.jpg'
-date: '2020-03-28'
+path: "/bass-street-chophouse"
+title: "Bass Street Chop House"
+city: "Moline"
+tags: ["Carry Out", "Delivery"]
+cover: "./bass-street.jpg"
+date: "2020-03-28"
 published: true
 ---
 

@@ -1,10 +1,10 @@
 ---
-path: '/arthurs-garden'
-title: 'Arthur’s Garden Delicatessen'
-city: 'Rock Island'
-cover: './arthurs-deli.png'
-tags: ['deli', 'sandwiches', 'Carry Out']
-date: '2020-03-28'
+path: "/arthurs-garden"
+title: "Arthur’s Garden Delicatessen"
+city: "Rock Island"
+cover: "./arthurs-deli.png"
+tags: ["Carry Out"]
+date: "2020-03-28"
 published: true
 ---
 

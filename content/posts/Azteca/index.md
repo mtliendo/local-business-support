@@ -1,10 +1,10 @@
 ---
-path: '/azteca-1'
-title: 'Azteca 1'
-city: 'Davenport'
-tags: ['mexican', 'Curbside', 'Carry Out', 'Delivery']
-cover: './azteca.jpg'
-date: '2020-03-28'
+path: "/azteca-1"
+title: "Azteca 1"
+city: "Davenport"
+tags: ["Curbside", "Carry Out", "Delivery"]
+cover: "./azteca.jpg"
+date: "2020-03-28"
 published: true
 ---
 

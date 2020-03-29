@@ -2,7 +2,7 @@
 path: "/cool-beanz"
 title: "Cool Beanz"
 city: "Rock Island"
-tags: ["coffee", "Curbside"]
+tags: ["Curbside"]
 cover: "./cool-beanz.jpg"
 date: "2020-03-28"
 published: true

@@ -1,11 +1,11 @@
 ---
-path: '/adolphs'
-cover: './adolphs.png'
-date: '2020-03-28'
+path: "/adolphs"
+cover: "./adolphs.png"
+date: "2020-03-28"
 title: "Adolph's"
 published: true
-tags: ['mexican', 'Drive Thru']
-city: 'East Moline'
+tags: ["Drive Thru"]
+city: "East Moline"
 ---
 
 # Welcome to Adolph's

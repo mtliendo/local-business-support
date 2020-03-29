@@ -2,7 +2,7 @@
 path: "/cafe-express-deli"
 title: "Cafe Express Deli"
 city: "Davenport"
-tags: ["coffee", sandwiches', "deli", "Curbside", "Delivery"]
+tags: ["Curbside", "Delivery"]
 cover: "./cafe-express.jpg"
 date: "2020-03-28"
 published: true

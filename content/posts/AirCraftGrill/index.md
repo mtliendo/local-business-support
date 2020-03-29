@@ -1,10 +1,10 @@
 ---
-path: '/aircraft-grill'
-tags: ['steak', 'salad', 'sandwiches', 'Carry Out', 'Curbside']
-city: 'Moline'
-cover: './aircraft.png'
-date: '2020-03-28'
-title: 'Aircraft Grill'
+path: "/aircraft-grill"
+tags: ["Carry Out", "Curbside"]
+city: "Moline"
+cover: "./aircraft.png"
+date: "2020-03-28"
+title: "Aircraft Grill"
 published: true
 ---
 

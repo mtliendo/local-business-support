@@ -2,7 +2,7 @@
 path: "/clints-draft-house"
 title: "Clint's Draft House"
 city: "Moline"
-tags: ["pub", "pizza", "sandwiches", "Carry Out", "Delivery"]
+tags: ["Carry Out", "Delivery"]
 cover: "./clints-draft-house.png"
 date: "2020-03-28"
 published: true

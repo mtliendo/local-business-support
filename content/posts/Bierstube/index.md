@@ -1,10 +1,10 @@
 ---
-path: '/bierstube'
-title: 'Bierstube'
-city: 'Moline'
-tags: ['german', 'Carry Out']
-cover: './bierstube.jpg'
-date: '2020-03-28'
+path: "/bierstube"
+title: "Bierstube"
+city: "Moline"
+tags: ["Carry Out"]
+cover: "./bierstube.jpg"
+date: "2020-03-28"
 published: true
 ---
 

@@ -2,7 +2,7 @@
 path: "/brandons-pub-and-grille"
 title: "Bandon's Pub and Grille"
 city: "Rock Island"
-tags: ["pub", "burgers", "Curbside", "Delivery"]
+tags: ["Curbside", "Delivery"]
 cover: "./brandons-pub.jpg"
 date: "2020-03-28"
 published: true

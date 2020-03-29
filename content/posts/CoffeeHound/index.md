@@ -2,7 +2,7 @@
 path: "/coffee-hound"
 title: "Coffee Hound"
 city: "Bettendorf"
-tags: ["coffee", "Carry Out", "Drive Thru"]
+tags: ["Carry Out", "Drive Thru"]
 cover: "./coffee-hound.png"
 date: "2020-03-28"
 published: true
