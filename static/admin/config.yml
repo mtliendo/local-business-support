@@ -15,14 +15,26 @@ collections:
     create: true
     fields:
       - { name: "title", label: "Title" }
-      - { name: "city", label: "City" }
+      - {
+          name: "city",
+          label: "Select a City",
+          widget: "select",
+          options:
+            ["Davenport", "Bettendorf", "Rock Island", "Moline", "East Moline"],
+        }
       - { name: "cover", label: "Cover Photo", widget: "image" }
-      - { name: "path", label: "URL Path" }
+      - {
+          name: "path",
+          label: "URL Path",
+          hint: 'If a store is "Hello Deli", the url should be something like /hello-deli',
+        }
       - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Body", widget: "markdown" }
       - {
           name: "tags",
-          label: "Tags",
-          widget: "list",
+          label: "Supported Ordering Options",
+          widget: "select",
+          options: ["Curbside", "Drive Thru", "Delivery", "Carry Out"],
+          multiple: true,
           default: ["Curbside", "Drive Thru", "Delivery", "Carry Out"],
         }
+      - { name: "body", label: "Body", widget: "markdown" }
