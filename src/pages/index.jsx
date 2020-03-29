@@ -21,6 +21,12 @@ const PostWrapper = styled.div`
 `
 const FilterSection = styled.section`
   margin: 4rem 4rem 1rem 4rem;
+  @media (max-width: 1000px) {
+    margin: 4rem 2rem 1rem 2rem;
+  }
+  @media (max-width: 700px) {
+    margin: 4rem 1rem 1rem 1rem;
+  }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
