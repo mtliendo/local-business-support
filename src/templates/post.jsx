@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import { Layout, Container, Content } from "layouts"
 import { TagsBlock, Header, SEO } from "components"
 import "../styles/prism"
+import NavBar from "../layouts/NavBar"
 
 const SuggestionBar = styled.div`
   display: flex;
@@ -35,6 +36,7 @@ const Post = ({ data, pageContext }) => {
         article
       />
       <Header title={title} city={city} cover={image} />
+      <NavBar />
       <Container>
         <TagsBlock list={tags || []} />
         <Content input={body} />

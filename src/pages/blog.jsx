@@ -4,6 +4,7 @@ import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { Header, BlogList } from "components"
 import { Layout } from "layouts"
+import NavBar from "../layouts/NavBar"
 
 const Blog = ({ data }) => {
   const { edges } = data.allMdx
@@ -11,6 +12,7 @@ const Blog = ({ data }) => {
     <Layout>
       <Helmet title={"Blog Page"} />
       <Header title="Blog Page">Gatsby Tutorial Starter</Header>
+      <NavBar />
       {edges.map(({ node }) => (
         <BlogList
           key={node.id}
