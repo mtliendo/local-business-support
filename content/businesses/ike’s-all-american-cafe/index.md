@@ -8,7 +8,9 @@ tags:
   - Curbside
   - Carry Out
 ---
-Introducing Teacher Discounts! 
+Thank you to all of our friends who have supported us this week. We have been overwhelmed by the generosity you have shown us and could not be more grateful. Thanks so much!!!
+
+As a reminder, we also have teacher discounts!
 
 Teachers have one of the hardest jobs, educating and preparing our youth for the challenges ahead of them. We'd like to give back to our teachers, by offering a 15% discount for all school faculty and staff! 
 
