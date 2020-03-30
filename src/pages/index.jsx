@@ -5,6 +5,7 @@ import Helmet from "react-helmet"
 import styled from "@emotion/styled"
 import { Header, PostList } from "components"
 import { Layout } from "layouts"
+import { NavBar } from "../layouts"
 
 const PostWrapper = styled.div`
   display: flex;
@@ -60,6 +61,7 @@ const Index = ({ data }) => {
       <Header title="Quad Citizens Supporting Local Businesses">
         {data.site.siteMetadata.title}
       </Header>
+      <NavBar />
       <FilterSection>
         <label for="city-filter">Filter by City</label>
         <select id="city-filter" onChange={handleCityChange}>

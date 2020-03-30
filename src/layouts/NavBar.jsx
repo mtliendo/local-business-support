@@ -1,25 +1,34 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
-import Headroom from "react-headroom"
-import logo from "../../static/logo/header-logo.png"
 
-const StyledLink = styled(Link)`
-  display: flex;
-  font-weight: 700;
-  align-items: center;
-`
+const NavLink = props => (
+  <Link
+    {...props}
+    getProps={({ isCurrent }) => {
+      // the object returned here is passed to the
+      // anchor element's props
+      return {
+        style: {
+          textDecoration: isCurrent ? "underline" : "none",
+        },
+      }
+    }}
+  />
+)
 
 const Nav = styled.nav`
   display: flex;
-  justify-content: flex-end;
+  margin-top: 1.3rem;
+  justify-content: space-around;
   font-family: ${props => props.theme.fontFamily.body};
   font-weight: 500;
   font-size: 1.1rem;
   align-items: center;
   a {
-    color: ${props => props.theme.colors.white.base};
-    margin-left: 2rem;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
     transition: all ${props => props.theme.transitions.default.duration};
     &:hover {
       color: ${props => props.theme.colors.white.grey};
@@ -28,16 +37,10 @@ const Nav = styled.nav`
 `
 
 const NavBar = () => (
-  <Headroom calcHeightOnResize disableInlineStyles>
-    {/* <StyledLink to="/">
-      <img src={logo} alt="Gatsby Logo" />
-    </StyledLink> */}
-    <Nav>
-      <Link to="/">Home</Link>
-      {/* <Link to="/blog">Blog</Link>
-      <Link to="/about">About</Link> */}
-    </Nav>
-  </Headroom>
+  <Nav>
+    <NavLink to="/">Home</NavLink>
+    <NavLink to="/about">About</NavLink>
+  </Nav>
 )
 
 export default NavBar

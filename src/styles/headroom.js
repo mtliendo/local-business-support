@@ -1,5 +1,5 @@
-import { css } from '@emotion/core';
-import theme from '../../config/theme';
+import { css } from "@emotion/core"
+import theme from "../../config/theme"
 
 const headroom = css`
   .headroom-wrapper {
@@ -64,6 +64,6 @@ const headroom = css`
       color: ${theme.colors.black.base};
     }
   }
-`;
+`
 
-export default headroom;
+export default headroom
