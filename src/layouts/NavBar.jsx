@@ -27,7 +27,7 @@ const Nav = styled.nav`
   align-items: center;
   a {
     font-size: 1.5rem;
-    color: black;
+    color: #222;
     font-weight: 600;
     transition: all ${props => props.theme.transitions.default.duration};
     &:hover {
