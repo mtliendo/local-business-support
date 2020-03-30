@@ -1,0 +1,26 @@
+---
+title: The Grape Life Wine Store & Lounge
+city: Davenport
+cover: grape-life-wine.jpg
+path: /the-grape-life-wine
+date: 2020-03-30T14:03:44.940Z
+tags:
+  - Delivery
+---
+As we announced today through our e-newsletter, we've made the decision to close the GL for carry-out and curbside until we are allowed by the State of Iowa to open up for normal business.
+
+\
+THANK YOU to everyone who gave us retail business by purchasing wine or gift cards these past two weeks. Your support of our little business means SO much to us, and we are eternally grateful!
+
+\
+If you are a Wine Club member and still need to pick up wine, please contact us through Facebook and we will arrange a time to meet you at the door. 
+
+We are preparing for April Wine Club and expect to have that ready to pick up on or after April 16th.
+
+\
+Please continue to support our local musicians by watching their live feeds and virtually tipping them, if you are able.
+
+Until we can enjoy the BEST wines with you again....\
+Stay home. Stay safe, Stay healthy.❤️
+
+🍷🍷Cheers, Diane & Kevin
