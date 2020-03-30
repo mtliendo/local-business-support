@@ -3,7 +3,7 @@ path: "/392-caffe"
 cover: "./cafe.jpg"
 date: "2020-03-28"
 title: "392Caffe"
-tags: ["coffee", "sandwiches", "Curbside"]
+tags: ["Curbside"]
 city: "Davenport"
 published: true
 ---
