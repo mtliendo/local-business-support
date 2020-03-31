@@ -1,8 +1,9 @@
 {
-    "hosting": {
-        "amplifyhosting": {
-            "service": "amplifyhosting",
-            "type": "cicd"
-        }
-    }
+	"hosting": {
+		"amplifyhosting": {
+			"service": "amplifyhosting",
+			"type": "cicd"
+		}
+	},
+	"auth": {}
 }
