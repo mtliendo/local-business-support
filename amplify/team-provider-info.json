@@ -10,6 +10,14 @@
             "StackName": "amplify-support-local-prod-05921",
             "StackId": "arn:aws:cloudformation:us-east-1:936471194299:stack/amplify-support-local-prod-05921/c5381ab0-7314-11ea-91eb-0a6641f83659",
             "AmplifyAppId": "d12lpvisawrztk"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d12lpvisawrztk",
+                    "type": "cicd"
+                }
+            }
         }
     }
 }
