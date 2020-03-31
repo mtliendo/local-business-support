@@ -7,7 +7,6 @@ import "typeface-candal"
 import { SEO } from "components"
 import { NavBar, Footer } from "layouts"
 import theme from "../../config/theme"
-import headroom from "../styles/headroom"
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -53,12 +52,10 @@ const Layout = ({ children }) => (
           h1 {
             font-family: ${theme.fontFamily.heading};
           }
-
-          /* ${headroom} */
         `}
       />
       <SEO />
-
+      <NavBar />
       {children}
       <Footer />
     </Fragment>

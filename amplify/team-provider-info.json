@@ -40,5 +40,29 @@
                 }
             }
         }
+    },
+    "mtliendo": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-support-local-mtliendo-122211-authRole",
+            "UnauthRoleArn": "arn:aws:iam::936471194299:role/amplify-support-local-mtliendo-122211-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::936471194299:role/amplify-support-local-mtliendo-122211-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-support-local-mtliendo-122211-deployment",
+            "UnauthRoleName": "amplify-support-local-mtliendo-122211-unauthRole",
+            "StackName": "amplify-support-local-mtliendo-122211",
+            "StackId": "arn:aws:cloudformation:us-east-1:936471194299:stack/amplify-support-local-mtliendo-122211/293b1580-7374-11ea-87dc-0a029b5a039d",
+            "AmplifyAppId": "d12lpvisawrztk"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d12lpvisawrztk",
+                    "type": "cicd"
+                }
+            },
+            "auth": {
+                "supportlocalcb37cb56": {}
+            }
+        }
     }
 }

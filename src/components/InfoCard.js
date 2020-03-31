@@ -1,0 +1,46 @@
+import React from "react"
+
+const InfoCard = ({
+  name,
+  street,
+  city,
+  website,
+  facebookUrl,
+  phoneNumber,
+}) => {
+  const websiteLink = website && (
+    <a href={website} target="_blank">
+      Website
+    </a>
+  )
+  return (
+    <section style={{ marginBottom: "2rem" }}>
+      <p style={{ textAlign: "center" }}>Visit and stay in touch!</p>
+      <article
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr)",
+        }}
+      >
+        <address style={{ display: "flex", flexDirection: "column" }}>
+          <span>{name}</span>
+          <span>{street}</span>
+          <span>{city}</span>
+        </address>
+        <section style={{ display: "flex", flexDirection: "column" }}>
+          <span>{websiteLink}</span>
+
+          <span>
+            {" "}
+            <a href={facebookUrl} target="_blank">
+              Facebook Page
+            </a>
+          </span>
+          <span>{phoneNumber}</span>
+        </section>
+      </article>
+    </section>
+  )
+}
+
+export default InfoCard

@@ -5,5 +5,12 @@
 			"type": "cicd"
 		}
 	},
-	"auth": {}
+	"auth": {
+		"supportlocalcb37cb56": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
 }
