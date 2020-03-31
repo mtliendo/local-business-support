@@ -8,10 +8,18 @@ tags:
   - Curbside
   - Delivery
 ---
-Hollars Bar and Grill is open, so come on down and support our small business!! 
 
-We need you!! 
+Hollars Bar N Grill
+4050 27th St
+Moline, Illinois 61265
+https://hollarsbarandgrill.com/
+https://www.facebook.com/Hollars-Bar-N-Grill-1634798793427000/
+(309) 277-9028
 
-Starting Tuesday March 17th, we will be open 11-10 for delivery and curb side pickup for now, this could change depending on how things go. 
+Hollars Bar and Grill is open, so come on down and support our small business!!
+
+We need you!!
+
+Starting Tuesday March 17th, we will be open 11-10 for delivery and curb side pickup for now, this could change depending on how things go.
 
 We will make it through this.

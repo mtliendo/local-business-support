@@ -8,6 +8,18 @@ tags: ["Drive Thru"]
 city: "East Moline"
 ---
 
+Adolph’s
+4030 Kennedy Dr
+East Moline, IL 61244
+www.adolphsmexicanfoods.com
+https://www.facebook.com/adolphsmexicanfoods/
+(309) 755-8427
+
+Also find us at
+2903 Avenue of the Cities
+Moline, IL 61265
+(309) 797-8408
+
 # Welcome to Adolph's
 
 Welcome to Adolph's Mexican Foods. We are a family-owned business located in Moline and East Moline. Started in 1952, by Adolph and Louisa Perez as El Sombrero, Adolph's Mexican Foods has become a Quad Cities landmark. Known for our delicious and authentic dishes, families have been coming here for over 60 years.

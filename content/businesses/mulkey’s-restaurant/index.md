@@ -7,6 +7,10 @@ date: 2020-03-30T07:20:37.073Z
 tags:
   - Carry Out
 ---
-| Phone   | (309) 788-1441                                                                                                                                    |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Website | [http://mulkeysrestaurant.weebly.com/](http://mulkeysrestaurant.weebly.com/?fbclid=IwAR0quWPWh_z1f123mXkLwmKbtQhTVT8P_oi2e0Zja-CbVbTXzeCCb5sg0dg) |
+
+Huckleberry’s Great Pizza and Calzone
+223 18th St
+Rock Island, Illinois 61201
+https://www.huckleberryspizza.com/
+https://www.facebook.com/The-Original-Huckleberrys-Great-Pizza-Calzones-65989417590/
+(309) 786-1122

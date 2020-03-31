@@ -8,6 +8,13 @@ date: "2020-03-28"
 published: true
 ---
 
+Bass Street Chop House
+1601 River Dr, Ste 100
+Moline, Illinois 61265
+https://www.bassstreetchophouse.com/
+https://www.facebook.com/bassstreetchophouse/
+(309) 762-4700
+
 In light of the most recent events, starting Tuesday morning we will be offering carryout and delivery services only.
 
 Our new hours of service will be 5-8 pm Every Night.

@@ -8,6 +8,13 @@ tags:
   - Delivery
 ---
 
+The Grape Life Wine and Lounge
+3402 Elmore Ave
+Davenport, Iowa 52807
+http://www.thegrapelife.com/
+https://www.facebook.com/TheGrapeLife/
+(563) 355-7070
+
 As we announced today through our e-newsletter, we've made the decision to close the GL for carry-out and curbside until we are allowed by the State of Iowa to open up for normal business.
 
 THANK YOU to everyone who gave us retail business by purchasing wine or gift cards these past two weeks. Your support of our little business means SO much to us, and we are eternally grateful!

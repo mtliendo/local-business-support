@@ -8,6 +8,14 @@ tags:
   - Curbside
   - Carry Out
 ---
+
+Huckleberry’s Great Pizza and Calzone
+223 18th St
+Rock Island, Illinois 61201
+https://www.huckleberryspizza.com/
+https://www.facebook.com/The-Original-Huckleberrys-Great-Pizza-Calzones-65989417590/
+(309) 786-1122
+
 We appreciate our customers and dedicated employees. We are monitoring the ongoing unprecedented situation we're in and will continue to try and employ staff and serve folks with a limited **"Curbside Carryout Menu"** safely for all.
 
 **Pick Up Ordering 309-786-1122**

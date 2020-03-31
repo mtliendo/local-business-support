@@ -8,6 +8,12 @@ tags:
   - Curbside
 ---
 
+Steve’s Old Time Tap
+223 17th St
+Rock Island, Illinois 61201
+https://www.facebook.com/steves.tap/
+(309) 786-4543
+
 At Steve's Old Time Tap
 We are family .
 We are keeping our kitchen open. For lunch 11-2 and dinner 5-8 give us a call 309-786-4543

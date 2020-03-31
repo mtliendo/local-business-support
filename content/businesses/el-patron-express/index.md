@@ -7,6 +7,13 @@ date: 2020-03-30T05:26:24.306Z
 tags:
   - Carry Out
 ---
-No words can explain how grateful we feel to be part of the Quad Cities! 
+
+El Patron Express
+3850 Blackhawk Road
+Rock Island, Illinois 61265
+https://www.facebook.com/elpatronexpressmex/
+(309) 558-0002
+
+No words can explain how grateful we feel to be part of the Quad Cities!
 
 Our community is coming together to help local businesses make it through the pandemic. We have no idea what will happen tomorrow or in the next weeks, what we do know is that the Quad Cities has our back!

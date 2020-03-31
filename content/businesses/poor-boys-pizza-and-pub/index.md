@@ -7,5 +7,10 @@ date: 2020-03-30T08:08:34.208Z
 tags:
   - Delivery
 ---
-Phone	(309) 786-2400
-Website	http://poorboyspizzaanpub.com/
+
+Poor Boys Pizza and Pub
+4121 18th Ave.
+Rock Island, Illinois 61201
+https://www.poorboyspizzaanpub.com/
+https://www.facebook.com/pages/Poor-Boys-Pizza-and-Pub/108077579233343
+(309) 786-2400

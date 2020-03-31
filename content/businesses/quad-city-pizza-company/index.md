@@ -8,6 +8,14 @@ tags:
   - Delivery
   - Carry Out
 ---
+
+Quad-City Pizza Company
+2724 Avenue of the Cities
+Moline, Illinois 61265
+https://qcpizzaco.com/
+https://www.facebook.com/qcpizzacomoline/
+(309) 797-5600
+
 ## IMPORTANT ANNOUNCEMENTS RELATED TO COVID-19:
 
 We currently offer carry out/pick up and delivery 4pm-9pm daily.

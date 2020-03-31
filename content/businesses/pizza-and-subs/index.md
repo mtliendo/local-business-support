@@ -8,6 +8,14 @@ tags:
   - Curbside
   - Drive Thru
 ---
+
+Pizza and Subs
+3700 Blackhawk Rd
+Rock Island, Illinois 61201
+https://www.pizzaandsubsqc.com/
+https://www.facebook.com/pizzaandsubs/
+(309) 788-7400
+
 Obviously we are all facing new challenges. Our utmost concern is keeping our employees, customers and everyone's family safe. As I'm sure everyone is now aware, the Governor of Illinois has shut down restaurants for dine in service beginning Tuesday March 17th.
 
 Temporarily, we will changing our hours to 11-8 daily.

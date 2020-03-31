@@ -8,6 +8,13 @@ date: "2020-03-28"
 published: true
 ---
 
+Cool Beanz
+1325 30th St
+Rock Island, Illinois 61201
+http://coolbeanzcoffeehouse.com/
+https://www.facebook.com/CoolBeanzRockIsland/
+(309) 558-0909
+
 ## Visit the Online Store to Order Ahead for Curbside Pickup!
 
 We know you don't want to go weeks without a Cool Beanz Breakfast Burrito or our famous Gourmet Grilled Cheese! So order online and we will bring your coffee, breakfast, or lunch out to your car!

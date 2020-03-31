@@ -8,6 +8,13 @@ date: "2020-03-28"
 published: true
 ---
 
+Azteca 1
+4811 N. Brady
+Davenport, Iowa 52806
+https://aztecamexicanrestaurants.com
+https://www.facebook.com/Azteca1MexicanRestaurant/
+(563) 386-6689
+
 We have custom catering available for small groups, individual servings.
 
 We will deliver! Phone: (563) 386-6689

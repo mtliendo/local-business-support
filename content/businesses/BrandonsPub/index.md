@@ -1,12 +1,19 @@
 ---
 path: "/brandons-pub-and-grille"
-title: "Bandon's Pub and Grille"
+title: "Brandon's Pub and Grille"
 city: "Rock Island"
 tags: ["Curbside", "Delivery"]
 cover: "./brandons-pub.jpg"
 date: "2020-03-28"
 published: true
 ---
+
+Brandon’s Pub and Grill
+3008 7th Ave
+Rock Island, Illinois 61201
+https://www.brandonspub.com/
+https://www.facebook.com/brandonspubandgrille/
+(309) 283-7628
 
 Good evening to all of our loyal patrons and community friends.
 

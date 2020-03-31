@@ -8,13 +8,20 @@ tags:
   - Delivery
   - Carry Out
 ---
+
+Gunchies
+2905 Telegraph Rd
+Davenport, Iowa 52804
+https://www.facebook.com/Gunchies-Davenport-775256619236086/
+(563) 323-9867
+
 Ok so I’ve been trying to figure a way to help supplement my bartenders lost tip wages since this mandatory closure.
 
- I never want to ask anyone for anything for free so here is what I have come up with: 
+I never want to ask anyone for anything for free so here is what I have come up with:
 
-I will be selling gift cards (payment must be made through Venmo). I will be giving 25% of all sales of these cards to my employees. Obviously the remaining % will go towards paying for the cost of goods and the hourly wages I will incur. 
+I will be selling gift cards (payment must be made through Venmo). I will be giving 25% of all sales of these cards to my employees. Obviously the remaining % will go towards paying for the cost of goods and the hourly wages I will incur.
 
-In this scenario you (my customers) will get equal value for your $ spent and I will have immediate funds available to disperse to employees. Please put “Pick up” or “Mail” and your address when you make payment. I will cover postage. Pick ups just need to call when they come down to get them. Unemployment will not pay their bills entirely and this is what I can do to help. 
+In this scenario you (my customers) will get equal value for your \$ spent and I will have immediate funds available to disperse to employees. Please put “Pick up” or “Mail” and your address when you make payment. I will cover postage. Pick ups just need to call when they come down to get them. Unemployment will not pay their bills entirely and this is what I can do to help.
 
 Thank you all who have supported my business and other businesses during this time. Thank you for being amazing family and friends. I love you all.
 
