@@ -7,7 +7,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -31,6 +30,7 @@ module.exports = {
           },
           "gatsby-remark-prismjs",
         ],
+        plugins: [`gatsby-remark-images`],
       },
     },
     {
