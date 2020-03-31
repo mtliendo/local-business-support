@@ -36,7 +36,7 @@ const Post = ({ data, pageContext }) => {
         article
       />
       <Header title={title} city={city} cover={image} />
-      <NavBar />
+
       <Container>
         <TagsBlock list={tags || []} />
         <Content input={body} />
@@ -46,7 +46,7 @@ const Post = ({ data, pageContext }) => {
           {prev && (
             <Link to={prev.frontmatter.path}>
               Previous
-              <h3>{prev.frontmatter.title}</h3>
+              <h5>{prev.frontmatter.title}</h5>
             </Link>
           )}
         </PostSuggestion>
@@ -54,7 +54,7 @@ const Post = ({ data, pageContext }) => {
           {next && (
             <Link to={next.frontmatter.path}>
               Next
-              <h3>{next.frontmatter.title}</h3>
+              <h5>{next.frontmatter.title}</h5>
             </Link>
           )}
         </PostSuggestion>

@@ -1,42 +1,48 @@
 import React from "react"
 import styled from "@emotion/styled"
-import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
 
 const Wrapper = styled.header`
-  -webkit-clip-path: polygon(100% 0, 0 0, 0 70%, 50% 100%, 100% 70%);
-  clip-path: polygon(100% 0, 0 0, 0 70%, 50% 100%, 100% 70%);
-  @media (max-width: ${props => props.theme.breakpoints.s}) {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 90%, 50% 100%, 100% 90%);
-    clip-path: polygon(100% 0, 0 0, 0 90%, 50% 100%, 100% 90%);
-  }
-  background: ${props => props.theme.gradient.rightToLeft};
-  height: 300px;
-  @media (max-width: ${props => props.theme.breakpoints.m}) {
-    height: 300px;
-  }
-  @media (max-width: ${props => props.theme.breakpoints.s}) {
-    height: 275px;
-  }
-  position: relative;
-  overflow: hidden;
-`
-
-const Text = styled.div`
-  color: ${props => props.theme.colors.white.base};
-  z-index: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background: #36d1dc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5b86e5,
+    #36d1dc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5b86e5,
+    #36d1dc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: flex;
   flex-direction: column;
-  text-align: center;
-  width: 100%;
-  max-width: ${props => props.theme.layout.base};
-  padding: 0 2rem;
-  margin-bottom: 3rem;
+  justify-content: space-evenly;
   align-items: center;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  height: 50vh;
+  color: white;
+  h1,
+  p {
+    text-align: center;
+    padding: 0 10px;
+  }
+`
+const OtherWrapper = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  height: 50vh;
+  color: white;
+  h1,
+  p {
+    text-align: center;
+    padding: 0 10px;
+  }
 `
 
 const Subtitle = styled.p`
@@ -44,17 +50,29 @@ const Subtitle = styled.p`
   color: ${props => props.theme.colors.white.light};
 `
 
-const Header = ({ children, title, date = "", cover, city = "" }) => (
-  <Wrapper>
-    <Img fluid={cover || {} || [] || ""} />
-    <Text>
-      <h1>{title}</h1>
-      <h3>{city}</h3>
-
-      {children && <Subtitle>{children}</Subtitle>}
-    </Text>
-  </Wrapper>
-)
+const Header = ({ children, title, date = "", cover, city = "" }) =>
+  console.log({ cover }) || cover.sizes ? (
+    <BackgroundImage
+      Tag="section"
+      className={"heyoo"}
+      backgroundColor={`#040e18`}
+      fluid={cover || {} || [] || ""}
+    >
+      {" "}
+      <OtherWrapper>
+        {" "}
+        <h1>{title}</h1> {children && <Subtitle>{children}</Subtitle>}{" "}
+      </OtherWrapper>{" "}
+    </BackgroundImage>
+  ) : (
+    <>
+      {" "}
+      <Wrapper>
+        {" "}
+        <h1>{title}</h1> {children && <Subtitle>{children}</Subtitle>}{" "}
+      </Wrapper>{" "}
+    </>
+  )
 
 export default Header
 

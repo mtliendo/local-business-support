@@ -10,7 +10,7 @@ const NavLink = props => (
       // anchor element's props
       return {
         style: {
-          textDecoration: isCurrent ? "underline" : "none",
+          color: isCurrent ? "white" : "#5B86E5",
         },
       }
     }}
@@ -19,15 +19,16 @@ const NavLink = props => (
 
 const Nav = styled.nav`
   display: flex;
-  margin-top: 1.3rem;
-  justify-content: space-around;
+  background-color: #222;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.8rem;
   font-family: ${props => props.theme.fontFamily.body};
   font-weight: 500;
   font-size: 1.1rem;
-  align-items: center;
   a {
     font-size: 1.5rem;
-    color: #222;
+    color: white;
     font-weight: 600;
     transition: all ${props => props.theme.transitions.default.duration};
     &:hover {

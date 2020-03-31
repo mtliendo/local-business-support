@@ -61,7 +61,6 @@ const Index = ({ data }) => {
       <Header title="Quad Citizens Supporting Local Businesses">
         {data.site.siteMetadata.title}
       </Header>
-      <NavBar />
       <FilterSection>
         <label for="city-filter">Filter by City</label>
         <select id="city-filter" onChange={handleCityChange}>
