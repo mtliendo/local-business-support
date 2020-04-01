@@ -15,7 +15,6 @@ const InfoCard = ({
   )
   return (
     <section style={{ marginBottom: "2rem" }}>
-      <p style={{ textAlign: "center" }}>Visit and stay in touch!</p>
       <article
         style={{
           display: "grid",

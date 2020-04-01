@@ -5,7 +5,6 @@ import PropTypes from "prop-types"
 import { Layout, Container, Content } from "layouts"
 import { TagsBlock, Header, SEO } from "components"
 import "../styles/prism"
-import NavBar from "../layouts/NavBar"
 
 const SuggestionBar = styled.div`
   display: flex;

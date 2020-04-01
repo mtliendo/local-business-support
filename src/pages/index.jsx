@@ -124,9 +124,7 @@ export const query = graphql`
         title
       }
     }
-    allMdx(
-      sort: { order: ASC, fields: [frontmatter___city, frontmatter___title] }
-    ) {
+    allMdx(sort: { order: ASC, fields: [frontmatter___title] }) {
       edges {
         node {
           id
