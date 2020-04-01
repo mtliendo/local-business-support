@@ -10,14 +10,20 @@ const Wrapper = styled.footer`
   font-family: ${props => props.theme.fontFamily.body};
   font-weight: 500;
   @media (max-width: ${props => props.theme.breakpoints.s}) {
-    padding-top: 7rem;
+    padding-top: 2rem;
   }
 `
 
 const Text = styled.div`
   display: flex;
   justify-content: space-between;
-
+  @media (max-width: ${props => props.theme.breakpoints.s}) {
+    display: flex;
+    flex-direction: column;
+    span {
+      margin-bottom: 1rem;
+    }
+  }
   padding: 0px 1rem 2rem 1rem;
   text-align: center;
   color: ${props => props.theme.colors.white.light};
