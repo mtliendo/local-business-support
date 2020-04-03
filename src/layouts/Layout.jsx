@@ -49,6 +49,10 @@ const Layout = ({ children }) => (
             text-decoration: none;
             color: ${theme.colors.linkHover};
           }
+          a[href^="tel:"]:before {
+            content: "\\260e";
+            margin-right: 0.5em;
+          }
           h1 {
             font-family: ${theme.fontFamily.heading};
           }

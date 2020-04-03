@@ -35,7 +35,12 @@ const InfoCard = ({
               Facebook Page
             </a>
           </span>
-          <span>{phoneNumber}</span>
+          <span>
+            {" "}
+            <a href="tel:+1{phoneNumber}" rel="nofollow">
+              {phoneNumber}
+            </a>
+          </span>
         </section>
       </article>
     </section>
