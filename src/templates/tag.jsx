@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { Layout, Container } from 'layouts';
-import { Header } from 'components';
-import config from '../../config/site';
+import React from "react"
+import { Link } from "gatsby"
+import styled from "@emotion/styled"
+import PropTypes from "prop-types"
+import Helmet from "react-helmet"
+import { Layout, Container } from "layouts"
+import { Header } from "components"
+import config from "../../config/site"
 
 const StyledLink = styled(Link)`
   color: ${props => props.theme.colors.white.light};
@@ -16,7 +16,7 @@ const StyledLink = styled(Link)`
     color: ${props => props.theme.colors.black.blue};
     background: ${props => props.theme.colors.white.light};
   }
-`;
+`
 
 const Information = styled.div`
   text-align: center;
@@ -24,11 +24,11 @@ const Information = styled.div`
     font-size: 2rem;
     margin-bottom: 1.25rem;
   }
-`;
+`
 
 const Tag = ({ pageContext }) => {
-  const { posts, tagName } = pageContext;
-  const upperTag = tagName.charAt(0).toUpperCase() + tagName.slice(1);
+  const { posts, tagName } = pageContext
+  const upperTag = tagName.charAt(0).toUpperCase() + tagName.slice(1)
   return (
     <Layout>
       <Helmet title={`${tagName} | ${config.siteTitle}`} />
@@ -45,14 +45,14 @@ const Tag = ({ pageContext }) => {
         </Information>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default Tag;
+export default Tag
 
 Tag.propTypes = {
   pageContext: PropTypes.shape({
     posts: PropTypes.array,
     tagName: PropTypes.string,
   }),
-};
+}

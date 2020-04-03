@@ -1,12 +1,12 @@
-import { css } from '@emotion/core';
-import theme from '../../config/theme';
+import { css } from "@emotion/core"
+import theme from "../../config/theme"
 
 const prism = css`
   p > code,
   li > code {
     color: #f8f8f2;
     background: #131316;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     text-align: left;
     word-spacing: normal;
     word-break: normal;
@@ -19,11 +19,11 @@ const prism = css`
     tab-size: 4;
     hyphens: none;
   }
-  code[class*='language-'],
-  pre[class*='language-'] {
+  code[class*="language-"],
+  pre[class*="language-"] {
     color: #f8f8f2;
     background: none;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     text-align: left;
     word-spacing: normal;
     word-break: normal;
@@ -32,7 +32,7 @@ const prism = css`
     tab-size: 4;
     hyphens: none;
   }
-  pre[class*='language-'] {
+  pre[class*="language-"] {
     padding: 1em;
     margin: 1.5rem 0;
     overflow: auto;
@@ -48,11 +48,11 @@ const prism = css`
       height: 12px;
     }
   }
-  pre[class*='language-'] {
+  pre[class*="language-"] {
     background: #131316;
   }
-  p > code[class*='language-'],
-  li > code[class*='language-'] {
+  p > code[class*="language-"],
+  li > code[class*="language-"] {
     border-radius: 0.3em;
     background: rgba(52, 152, 219, 0.2);
     color: #2e3246;
@@ -126,6 +126,6 @@ const prism = css`
   .token.entity {
     cursor: help;
   }
-`;
+`
 
-export default prism;
+export default prism

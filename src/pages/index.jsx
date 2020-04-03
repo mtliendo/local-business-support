@@ -3,24 +3,24 @@ import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import styled from "@emotion/styled"
-import {css} from '@emotion/core'
+import { css } from "@emotion/core"
 import { Header, PostList } from "components"
 import { Layout } from "layouts"
 import { useFilterState, useFilterDispatch } from "../context/filter-context"
 
 const normalStyle = props =>
-css`
-  color: ${props.theme.colors.black.base};
-  background: ${props.theme.colors.white.grey};
-  border: solid 1px ${props.theme.colors.black.base};
-`
+  css`
+    color: ${props.theme.colors.black.base};
+    background: ${props.theme.colors.white.grey};
+    border: solid 1px ${props.theme.colors.black.base};
+  `
 
 const activeStyle = props =>
-css`
-  color: ${props.theme.colors.white.base};
-  background: ${props.theme.colors.black.blue};
-  border: solid 1px ${props.theme.colors.black.blue};
-`
+  css`
+    color: ${props.theme.colors.white.base};
+    background: ${props.theme.colors.black.blue};
+    border: solid 1px ${props.theme.colors.black.blue};
+  `
 
 const TagButton = styled.button`
   margin: 0 8px;
@@ -32,7 +32,7 @@ const TagButton = styled.button`
     box-shadow: 0 2px 2px 2px ${props => props.theme.colors.black.light};
     cursor: pointer;
   }
-  ${props => props.active ? activeStyle : normalStyle}
+  ${props => (props.active ? activeStyle : normalStyle)}
 `
 
 const PostWrapper = styled.div`
@@ -71,37 +71,38 @@ const CityFilterBlock = styled.div`
     margin-bottom: 0.5rem;
     font-weight: bold;
   }
-  select, option {
+  select,
+  option {
     display: block;
     background-image: none;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .75);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.75);
     height: 34px;
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
     line-height: 1.5;
     font-size: 1rem;
     font-weight: 400;
     overflow: visible;
     margin: 0;
     border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15 ease-in-out;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15 ease-in-out;
     &:focus {
       border-color: #80bdff;
       outline: 0;
-      box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
   }
-`; 
+`
 
 const TagFilterBlock = styled.div`
   display: inline-block;
   margin-left: 25px;
   text-align: center;
   p {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     font-weight: bold;
   }
-`;
+`
 
 const Index = ({ data }) => {
   const { edges } = data.allMdx
@@ -120,32 +121,32 @@ const Index = ({ data }) => {
       )
     }
     if (selectedTags.length > 0) {
-      updatedStores = updatedStores.filter((store) => (
-      store.node.frontmatter.tags.some((tag) => selectedTags.includes(tag))
-    ))
-    } 
+      updatedStores = updatedStores.filter(store =>
+        store.node.frontmatter.tags.some(tag => selectedTags.includes(tag))
+      )
+    }
 
     setFilterableStores(updatedStores)
   }, [selectedCity, selectedTags])
 
-const tagList = React.useMemo(() => {
-  const postsByTag = {}
-  // create tags page
-  allStores.current.forEach(({ node }) => {
-    if (node.frontmatter.tags) {
-      node.frontmatter.tags.forEach(tag => {
-        if (!postsByTag[tag]) {
-          postsByTag[tag] = []
-        }
+  const tagList = React.useMemo(() => {
+    const postsByTag = {}
+    // create tags page
+    allStores.current.forEach(({ node }) => {
+      if (node.frontmatter.tags) {
+        node.frontmatter.tags.forEach(tag => {
+          if (!postsByTag[tag]) {
+            postsByTag[tag] = []
+          }
 
-        postsByTag[tag].push(node)
-      })
-    }
-  })
+          postsByTag[tag].push(node)
+        })
+      }
+    })
 
-  const tags = Object.keys(postsByTag)
-  return tags;
-}, [allStores])
+    const tags = Object.keys(postsByTag)
+    return tags
+  }, [allStores])
 
   return (
     <Layout>
@@ -155,25 +156,35 @@ const tagList = React.useMemo(() => {
       </Header>
       <FilterSection>
         <CityFilterBlock>
-        <label htmlFor="city-filter">Filter by City</label>
-        <select id="city-filter" onChange={e => filterDispatch({ type: "update_city", payload: e.target.value })} value={selectedCity}>
-          <option value="All">All Cities</option>
-          <option value="Davenport">Davenport</option>
-          <option value="Rock Island">Rock Island</option>
-          <option value="Bettendorf">Bettendorf</option>
-          <option value="Moline">Moline</option>
-          <option value="East Moline">East Moline</option>
-        </select>
+          <label htmlFor="city-filter">Filter by City</label>
+          <select
+            id="city-filter"
+            onChange={e =>
+              filterDispatch({ type: "update_city", payload: e.target.value })
+            }
+            value={selectedCity}
+          >
+            <option value="All">All Cities</option>
+            <option value="Davenport">Davenport</option>
+            <option value="Rock Island">Rock Island</option>
+            <option value="Bettendorf">Bettendorf</option>
+            <option value="Moline">Moline</option>
+            <option value="East Moline">East Moline</option>
+          </select>
         </CityFilterBlock>
         <TagFilterBlock>
           <p>Find businesses offering: </p>
-          {tagList.map((tag) =>
+          {tagList.map(tag => (
             <TagButton
               key={tag}
               active={selectedTags.includes(tag)}
-              onClick={() => filterDispatch({type: 'update_tags', payload: tag})}
-            >{tag}</TagButton>)
-          }
+              onClick={() =>
+                filterDispatch({ type: "update_tags", payload: tag })
+              }
+            >
+              {tag}
+            </TagButton>
+          ))}
         </TagFilterBlock>
       </FilterSection>
       <PostWrapper>
