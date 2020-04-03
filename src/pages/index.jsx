@@ -6,6 +6,7 @@ import styled from "@emotion/styled"
 import { Header, PostList } from "components"
 import { Layout } from "layouts"
 import { NavBar } from "../layouts"
+import { useFilterState, useFilterDispatch } from "../context/filter-context"
 
 const PostWrapper = styled.div`
   display: flex;
@@ -39,22 +40,25 @@ const FilterSection = styled.section`
 const Index = ({ data }) => {
   const { edges } = data.allMdx
 
+  const { city, tags } = useFilterState()
+  const filterDispatch = useFilterDispatch()
+
   const allStores = React.useRef(edges)
   const [filterableStores, setFilterableStores] = React.useState(edges)
 
-  const handleCityChange = e => {
-    const selectedCity = e.target.value
+  React.useEffect(() => {
     let updatedStores
-    if (selectedCity !== "All") {
+    if (city !== "All") {
       updatedStores = allStores.current.filter(
-        store => store.node.frontmatter.city === selectedCity
+        store => store.node.frontmatter.city === city
       )
     } else {
       updatedStores = allStores.current
     }
 
     setFilterableStores(updatedStores)
-  }
+  }, [city])
+
   return (
     <Layout>
       <Helmet title={"Quad Citizens Supporting Local Businesses"} />
@@ -63,7 +67,7 @@ const Index = ({ data }) => {
       </Header>
       <FilterSection>
         <label for="city-filter">Filter by City</label>
-        <select id="city-filter" onChange={handleCityChange}>
+        <select id="city-filter" onChange={e => filterDispatch({ type: "update_city", payload: e.target.value })} value={city}>
           <option value="All">All Cities</option>
           <option value="Davenport">Davenport</option>
           <option value="Rock Island">Rock Island</option>
