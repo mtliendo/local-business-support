@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
-
 const NavLink = props => (
   <Link
     {...props}
@@ -20,12 +19,13 @@ const NavLink = props => (
 const Nav = styled.nav`
   display: flex;
   background-color: #222;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 0.8rem;
   font-family: ${props => props.theme.fontFamily.body};
   font-weight: 500;
   font-size: 1.1rem;
+
   a {
     font-size: 1.5rem;
     color: white;
@@ -35,12 +35,22 @@ const Nav = styled.nav`
       color: ${props => props.theme.colors.white.grey};
     }
   }
+  span a:last-child {
+    margin-left: 0.8rem;
+  }
 `
 
-const NavBar = () => (
+const NavBar = ({ user }) => (
   <Nav>
     <NavLink to="/">Home</NavLink>
-    {/* <NavLink to="/about">About</NavLink> */}
+    <span>
+      <NavLink to="/about">About</NavLink>
+      {user ? (
+        <NavLink to="/about">Sign Out</NavLink>
+      ) : (
+        <NavLink to="/about">Sign In</NavLink>
+      )}
+    </span>
   </Nav>
 )
 

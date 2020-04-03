@@ -6,7 +6,7 @@
 		}
 	},
 	"auth": {
-		"supportlocalcb37cb56": {
+		"supportlocalb51e6611": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],

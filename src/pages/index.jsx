@@ -5,7 +5,12 @@ import Helmet from "react-helmet"
 import styled from "@emotion/styled"
 import { Header, PostList } from "components"
 import { Layout } from "layouts"
-import { NavBar } from "../layouts"
+import { Authenticator } from "aws-amplify-react"
+import Auth from "@aws-amplify/auth"
+import { Hub, Logger } from "@aws-amplify/core"
+import awsconfig from "../aws-exports"
+
+Auth.configure(awsconfig)
 
 const PostWrapper = styled.div`
   display: flex;
@@ -37,10 +42,35 @@ const FilterSection = styled.section`
 `
 
 const Index = ({ data }) => {
-  const { edges } = data.allMdx
-
   const allStores = React.useRef(edges)
+  const { edges } = data.allMdx
   const [filterableStores, setFilterableStores] = React.useState(edges)
+  const [user, setUser] = React.useState({})
+  const logger = new Logger("My-Logger")
+
+  React.useEffect(() => {
+    const listener = data => {
+      switch (data.payload.event) {
+        case "signIn":
+          logger.error("user signed in") //[ERROR] My-Logger - user signed in
+          console.log("the data", data)
+          setUser({ username: data.payload.data.username })
+          break
+        case "signUp":
+          logger.error("user signed up")
+          break
+        case "signOut":
+          logger.error("user signed out")
+          break
+        case "signIn_failure":
+          logger.error("user sign in failed")
+          break
+        case "configured":
+          logger.error("the Auth module is configured")
+      }
+    }
+    Hub.listen("auth", listener)
+  }, [])
 
   const handleCityChange = e => {
     const selectedCity = e.target.value
@@ -55,7 +85,9 @@ const Index = ({ data }) => {
 
     setFilterableStores(updatedStores)
   }
-  return (
+  return !user.username ? (
+    <Authenticator />
+  ) : (
     <Layout>
       <Helmet title={"Quad Citizens Supporting Local Businesses"} />
       <Header title="Quad Citizens Supporting Local Businesses">
