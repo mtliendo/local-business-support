@@ -4,8 +4,8 @@ const FilterStateContext = React.createContext()
 const FilterDispatchContext = React.createContext()
 
 const initFilterState = {
-  city: "All",
-  tags: [],
+  selectedCity: "All",
+  selectedTags: [],
 }
 
 const addTag = (array, tag) => {
@@ -27,15 +27,15 @@ function filterReducer(state, action) {
     case "update_city": {
       return {
         ...state,
-        city: action.payload,
+        selectedCity: action.payload,
       }
     }
     case "update_tags": {
       return {
         ...state,
-        tags: state.tags.includes(action.payload)
-          ? removeTag(state.tags, action.payload)
-          : addTag(state.tags, action.payload),
+        selectedTags: state.selectedTags.includes(action.payload)
+          ? removeTag(state.selectedTags, action.payload)
+          : addTag(state.selectedTags, action.payload),
       }
     }
     default: {
