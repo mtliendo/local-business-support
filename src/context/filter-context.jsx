@@ -8,13 +8,10 @@ const initFilterState = {
   selectedTags: [],
 }
 
-const addTag = (tagsList, tagToAdd) => (
-  [...tagsList, tagToAdd]
-)
+const addTag = (tagsList, tagToAdd) => [...tagsList, tagToAdd]
 
-const removeTag = (tagsList, tagToRemove) => (
-  tagsList.filter((tag) => tag !== tagToRemove)
-)
+const removeTag = (tagsList, tagToRemove) =>
+  tagsList.filter(tag => tag !== tagToRemove)
 
 function filterReducer(state, action) {
   switch (action.type) {
@@ -33,7 +30,7 @@ function filterReducer(state, action) {
       }
     }
     default: {
-      throw new Error(`Unhandled action type: ${action.type}`)
+      console.error(`Unhandled action type: ${action.type}`)
     }
   }
 }
@@ -52,7 +49,7 @@ function FilterProvider({ children }) {
 function useFilterState() {
   const context = React.useContext(FilterStateContext)
   if (context === undefined) {
-    throw new Error("useFilterState must be used within a FilterProvider")
+    console.error("useFilterState must be used within a FilterProvider")
   }
   return context
 }
@@ -60,7 +57,7 @@ function useFilterState() {
 function useFilterDispatch() {
   const context = React.useContext(FilterDispatchContext)
   if (context === undefined) {
-    throw new Error("useFilterDispatch must be used within a FilterProvider")
+    console.error("useFilterDispatch must be used within a FilterProvider")
   }
   return context
 }
