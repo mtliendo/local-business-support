@@ -30,7 +30,7 @@ function filterReducer(state, action) {
       }
     }
     default: {
-      console.error(`Unhandled action type: ${action.type}`)
+      console.warn(`Unhandled action type: ${action.type}`)
     }
   }
 }
@@ -49,17 +49,17 @@ function FilterProvider({ children }) {
 function useFilterState() {
   const context = React.useContext(FilterStateContext)
   if (context === undefined) {
-    console.error("useFilterState must be used within a FilterProvider")
+    console.warn("useFilterState must be used within a FilterProvider")
   }
-  return context
+  return context ? context : { selectedCity: [], selectedTags: [] }
 }
 
 function useFilterDispatch() {
   const context = React.useContext(FilterDispatchContext)
   if (context === undefined) {
-    console.error("useFilterDispatch must be used within a FilterProvider")
+    console.warn("useFilterDispatch must be used within a FilterProvider")
   }
-  return context
+  return context ? context : {}
 }
 
 export { FilterProvider, useFilterState, useFilterDispatch }
