@@ -62,7 +62,7 @@ const FilterSection = styled.section`
   flex-wrap: wrap;
 `
 
-const CityFilterBlock = styled.div`
+const CityFilterBlock = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -94,7 +94,7 @@ const CityFilterBlock = styled.div`
   }
 `
 
-const TagFilterBlock = styled.div`
+const TagFilterBlock = styled.section`
   display: inline-block;
   margin-left: 25px;
   text-align: center;
@@ -129,24 +129,18 @@ const Index = ({ data }) => {
     setFilterableStores(updatedStores)
   }, [selectedCity, selectedTags])
 
-  const tagList = React.useMemo(() => {
-    const postsByTag = {}
-    // create tags page
-    allStores.current.forEach(({ node }) => {
-      if (node.frontmatter.tags) {
-        node.frontmatter.tags.forEach(tag => {
-          if (!postsByTag[tag]) {
-            postsByTag[tag] = []
-          }
-
-          postsByTag[tag].push(node)
-        })
-      }
-    })
-
-    const tags = Object.keys(postsByTag)
-    return tags
-  }, [allStores])
+  const postsByTag = {}
+  allStores.current.forEach(({ node }) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        if (!postsByTag[tag]) {
+          postsByTag[tag] = []
+        }
+        postsByTag[tag].push(node)
+      })
+    }
+  })
+  const tagList = Object.keys(postsByTag)
 
   return (
     <Layout>

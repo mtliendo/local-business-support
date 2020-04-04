@@ -8,19 +8,13 @@ const initFilterState = {
   selectedTags: [],
 }
 
-const addTag = (array, tag) => {
-  return [...array, tag]
-}
+const addTag = (tagsList, tagToAdd) => (
+  [...tagsList, tagToAdd]
+)
 
-const removeTag = (array, tag) => {
-  const i = array.indexOf(tag)
-  if (i === -1) {
-    return array
-  }
-  const newArray = array.slice()
-  newArray.splice(i, 1)
-  return newArray
-}
+const removeTag = (tagsList, tagToRemove) => (
+  tagsList.filter((tag) => tag !== tagToRemove)
+)
 
 function filterReducer(state, action) {
   switch (action.type) {
