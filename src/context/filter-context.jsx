@@ -51,7 +51,7 @@ function useFilterState() {
   if (context === undefined) {
     console.warn("useFilterState must be used within a FilterProvider")
   }
-  return context ? context : { selectedCity: [], selectedTags: [] }
+  return context ? context : initFilterState
 }
 
 function useFilterDispatch() {
