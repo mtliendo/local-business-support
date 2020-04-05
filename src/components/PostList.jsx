@@ -120,7 +120,7 @@ const Tag = styled.span`
 `
 
 const TagList = ({ tags }) => {
-  return tags.map(tag => <Tag>{tag}</Tag>)
+  return tags.map(tag => <Tag key={tag}>{tag}</Tag>)
 }
 const PostList = ({ cover, path, title, city, tags }) => (
   <Wrapper>

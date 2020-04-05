@@ -51,26 +51,22 @@ const Subtitle = styled.p`
 `
 
 const Header = ({ children, title, date = "", cover, city = "" }) =>
-  console.log({ cover }) || cover.sizes ? (
+  cover.sizes ? (
     <BackgroundImage
       Tag="section"
       className={"heyoo"}
       backgroundColor={`#040e18`}
       fluid={cover || {} || [] || ""}
     >
-      {" "}
       <OtherWrapper>
-        {" "}
-        <h1>{title}</h1> {children && <Subtitle>{children}</Subtitle>}{" "}
-      </OtherWrapper>{" "}
+        <h1>{title}</h1> {children && <Subtitle>{children}</Subtitle>}
+      </OtherWrapper>
     </BackgroundImage>
   ) : (
     <>
-      {" "}
       <Wrapper>
-        {" "}
-        <h1>{title}</h1> {children && <Subtitle>{children}</Subtitle>}{" "}
-      </Wrapper>{" "}
+        <h1>{title}</h1> {children && <Subtitle>{children}</Subtitle>}
+      </Wrapper>
     </>
   )
 
