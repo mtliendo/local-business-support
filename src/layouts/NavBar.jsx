@@ -1,6 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import styled from "@emotion/styled"
+import { logout, isLoggedIn } from "../utils/auth"
+import { Auth } from "aws-amplify"
 const NavLink = props => (
   <Link
     {...props}
@@ -25,9 +27,10 @@ const Nav = styled.nav`
   font-family: ${props => props.theme.fontFamily.body};
   font-weight: 500;
   font-size: 1.1rem;
-
+  @media only screen and (max-width: 600px) {
+    font-size: 0.9rem;
+  }
   a {
-    font-size: 1.5rem;
     color: white;
     font-weight: 600;
     transition: all ${props => props.theme.transitions.default.duration};
@@ -35,23 +38,32 @@ const Nav = styled.nav`
       color: ${props => props.theme.colors.white.grey};
     }
   }
-  span a:last-child {
+  span a {
     margin-left: 0.8rem;
   }
 `
 
-const NavBar = ({ user }) => (
-  <Nav>
-    <NavLink to="/">Home</NavLink>
-    <span>
-      <NavLink to="/about">About</NavLink>
-      {user ? (
-        <NavLink to="/about">Sign Out</NavLink>
-      ) : (
-        <NavLink to="/about">Sign In</NavLink>
-      )}
-    </span>
-  </Nav>
-)
+const NavBar = () => {
+  return (
+    <Nav>
+      <NavLink to="/">SLBQC</NavLink>
+
+      <span className="nav-right">
+        <NavLink to="/about">About</NavLink>
+        {!isLoggedIn() ? (
+          <NavLink to="/app/login">Sign In</NavLink>
+        ) : (
+          <a
+            onClick={() =>
+              Auth.signOut().then(() => logout(() => navigate("/")))
+            }
+          >
+            Sign Out
+          </a>
+        )}
+      </span>
+    </Nav>
+  )
+}
 
 export default NavBar
