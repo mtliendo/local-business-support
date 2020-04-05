@@ -2,6 +2,8 @@ import React from "react"
 import styled from "@emotion/styled"
 import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
+import { Link, navigate } from "gatsby"
+import { isLoggedIn } from "../utils/auth"
 
 const Wrapper = styled.header`
   background: #36d1dc; /* fallback for old browsers */
@@ -65,7 +67,13 @@ const Header = ({ children, title, date = "", cover, city = "" }) =>
   ) : (
     <>
       <Wrapper>
-        <h1>{title}</h1> {children && <Subtitle>{children}</Subtitle>}
+        <h1>{title}</h1>
+        {children && <Subtitle>{children}</Subtitle>}
+        {!isLoggedIn() && (
+          <h3>
+            To play Bingo for Businesses <Link to="/app/login">sign in</Link>
+          </h3>
+        )}
       </Wrapper>
     </>
   )
