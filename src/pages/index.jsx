@@ -6,10 +6,6 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { Header, PostList } from "components"
 import { Layout } from "layouts"
-import Amplify from "aws-amplify"
-import awsconfig from "../aws-exports"
-
-Auth.configure(awsconfig)
 import { useFilterState, useFilterDispatch } from "../context/filter-context"
 
 const normalStyle = props =>
@@ -110,7 +106,6 @@ const TagFilterBlock = styled.section`
 
 const Index = ({ data }) => {
   const { edges } = data.allMdx
-
   const { selectedCity, selectedTags } = useFilterState()
   const filterDispatch = useFilterDispatch()
 
@@ -147,9 +142,7 @@ const Index = ({ data }) => {
   })
   const tagList = Object.keys(postsByTag)
 
-  return !user.username ? (
-    <Authenticator />
-  ) : (
+  return (
     <Layout>
       <Helmet title={"Quad Citizens Supporting Local Businesses"} />
       <Header title="Quad Citizens Supporting Local Businesses">

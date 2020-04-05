@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
-import { Link, navigate } from "gatsby"
+import { Link } from "gatsby"
 import { isLoggedIn } from "../utils/auth"
 
 const Wrapper = styled.header`
